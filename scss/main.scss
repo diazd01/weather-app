@@ -1,0 +1,336 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Verdana";
+}
+
+.header {
+  padding: 50px;
+  background-color: #323644;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: white;
+
+  &__title {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    align-items: center;
+  }
+
+  &__item {
+    font-size: 1.1rem;
+    border: 3px solid #239ad8;
+    border-radius: 20px;
+    padding: 8px 1rem;
+    margin-right: 1rem;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+
+  &__link {
+    margin: 0 1.25rem;
+    text-decoration: none;
+    padding-bottom: 0.625rem;
+    color: white;
+  }
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 6rem;
+  align-items: center;
+  background-image: url("../assets/images/toronto.jpg");
+  background-position: center;
+  background-size: cover;
+  // filter: grayscale(50%);
+  // &:hover {
+  //   filter: grayscale(0%);
+  // }
+
+  &__container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: 1.25rem;
+    font-size: 2.5rem;
+  }
+
+  &__description {
+    margin: 1rem 0;
+    font-size: 1.125rem;
+    line-height: 1.5;
+  }
+
+  &__button {
+    color: white;
+    text-decoration: none;
+    font-size: 1.125rem;
+    cursor: pointer;
+    padding: 0.8rem 3rem;
+    margin-top: 1.25rem;
+    min-width: 11.25rem;
+    max-width: fit-content;
+    border-radius: 1.5625rem;
+  }
+
+  &__image {
+    max-width: 30rem;
+  }
+}
+
+//FORM PART---------
+
+//** variables
+$background: #f5f6fa;
+$text: #9c9c9c;
+$input-bg-color: #fff;
+$input-text-color: #a3a3a3;
+$button-bg-color: #7f8ff4;
+$button-text-color: #fff;
+
+//** root
+:root {
+  background: $background;
+  color: $text;
+  font: 1rem "PT Sans", sans-serif;
+}
+
+.hero__container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  color: inherit;
+
+  &:hover {
+    color: $button-bg-color;
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+//** button
+.btn {
+  display: inline-block;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  transition: all 200ms ease-in;
+  cursor: pointer;
+
+  &--primary {
+    background: $button-bg-color;
+    color: $button-text-color;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    padding: 12px 36px;
+
+    &:hover {
+      background: darken($button-bg-color, 4%);
+    }
+
+    &:active {
+      background: $button-bg-color;
+      box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &--inside {
+    margin-left: -96px;
+  }
+}
+
+//** form
+.form {
+  &__field {
+    width: 360px;
+    background: #fff;
+    color: $input-text-color;
+    font: inherit;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    border: 0;
+    outline: 0;
+    padding: 22px 18px;
+  }
+}
+
+//FORM END------------
+
+//Card
+
+.card {
+  width: 30%;
+  min-height: 555px;
+  border: 2px solid lightgray;
+  border-radius: 50px;
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f5f5f5;
+  color: black;
+
+  &__container {
+    text-align: center;
+    width: 100%;
+  }
+
+  &__city {
+    color: rgb(117, 117, 117);
+    padding: 1rem 0 0.5rem;
+    font-size: 1rem;
+  }
+
+  &__date {
+    color: rgb(117, 117, 117);
+    font-size: 1rem;
+    padding: 8px;
+  }
+
+  &__weather {
+    padding: 1rem 0;
+  }
+
+  &__temp {
+    padding-bottom: 1rem;
+    font-size: 3rem;
+  }
+
+  &__temp-description {
+    padding: 8px;
+  }
+
+  &__updated-time {
+    padding: 1rem;
+  }
+
+  &__updated {
+    display: inline-block;
+  }
+
+  &__time {
+    display: inline-block;
+  }
+
+  &__info-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+  }
+
+  &__info {
+    width: 45%;
+    // height: 50px;
+    // margin: 12px;
+    padding: 1rem;
+    background-color: #eae1e0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+  }
+
+  &__info-title {
+    text-transform: capitalize;
+    font-size: 14px;
+    color: grey;
+    padding-bottom: 8px;
+  }
+}
+
+//Footer
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: #323644;
+  padding: 3rem 7rem;
+  color: white;
+
+  &__content {
+    display: flex;
+    margin-right: 3.75rem;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    margin-right: 2.5rem;
+    font-size: 1.1em;
+  }
+
+  &__icon {
+    max-width: 1.875rem;
+    max-height: 1.875rem;
+    margin-right: 1.875rem;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__title {
+    margin: 1.25rem 0;
+    font-size: 1.7rem;
+  }
+}
+
+.error {
+  color: crimson;
+}
+
+// new
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.appear {
+  animation: appear 0.7s ease-in;
+}
+
+.blink {
+  transition: all 0.7s ease-in;
+}

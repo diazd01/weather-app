@@ -5,32 +5,143 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="./scss/main.css" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.23.0/axios.js"></script>
 	<title>Document</title>
 </head>
 
 <body>
+	<header class="header">
 
-	<div class='container'>
-		<form class="form">
-			<label for="form-name" class="form__label">Weather App</label>
-			<input type="text" name="name" class="form__input" placeholder="Enter City">
-			<button type="submit" class="form__button">FIND</button>
-		</form>
+		<a class="navbar__title" href="./index.html"><img src="">
+			<h2>A&D Weather Forecast</h2>
+		</a>
+		<nav class="navbar">
 
-		<div class="weather__buttons">
-			<input type="radio" name="temp" class="weather__cel">
-			Celsius</input>
-			<input type="radio" name="temp" class="weather__fah">
-			Fahrenheit</input>
+			<ul class="navbar__list">
+				<li class="navbar__item">
+					<a class="navbar__link" href="./index.html">Home</a>
+				</li>
+				<li class="navbar__item">
+					<a class="navbar__link" href="#">News</a>
+				</li>
+				<li class="navbar__item">
+					<a class="navbar__link" href="#">Contact</a>
+				</li>
+
+			</ul>
+		</nav>
+	</header>
+
+	<section class="hero">
+		<div class="hero__container">
+			<div class="hero__container-item">
+				<form class="form">
+					<input type="text" name="name" class="form__field" placeholder="Enter City">
+					<button type="submit" class="form__button btn btn--primary btn--inside uppercas">FIND</button>
+				</form>
+			</div>
 		</div>
 
 		<div class="content">
 
 		</div>
-	</div>
+		</div>
 
+		<article class="card">
+			<div class="card__container">
+				<p class="card__city">Your City</p>
+				<p class="card__date">Date</p>
+				<img src="./assets/icons/sunny.png" alt="Weather" class="card__weather">
+				<p class="card__temp-descrip"></p>
+				<p class="card__temp"></p>
+
+				<div class="weather__buttons">
+					<input type="radio" name="temp" class="weather__cel">
+					Celsius</input>
+					<input type="radio" name="temp" class="weather__fah">
+					Fahrenheit</input>
+				</div>
+				<div class="card__updated-time">
+					<p class="card__updated">Last updated: </p>
+				<p class="card__time"></p>
+				</div>
+				
+
+				<div class="card__info-container">
+					<div class="card__info">
+						<div class="card__info-image">
+							<img src="./assets/icons/humidity(48).png" alt="Humidity">
+						</div>
+						<div class="card__info-content">
+							<p class="card__info-title">Humidity:</p>
+							<p class="card__humidity card__info-title-one">--</p>
+						</div>
+					</div>
+					<div class="card__info">
+						<div class="card__info-image">
+							<img src="./assets/icons/windspeed.png" alt="Wind Speed">
+						</div>
+						<div class="card__info-content">
+							<p class="card__info-title">Wind</p>
+							<p class="card__humidity card__info-title-two">--</p>
+						</div>
+					</div>
+					<div class="card__info">
+						<div class="card__info-image">
+							<img src="./assets/icons/sunrise2.png" alt="Sunrise">
+						</div>
+						<div class="card__info-content">
+							<p class="card__info-title">Sunrise</p>
+							<p class="card__humidity card__info-title-three">--</p>
+						</div>
+					</div>
+					<div class="card__info">
+						<div class="card__info-image">
+							<img src="./assets/icons/sunset2.png" alt="Sunset">
+						</div>
+						<div class="card__info-content">
+							<p class="card__info-title">Sunset</p>
+							<p class="card__humidity card__info-title-four">--</p>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</article>
+
+	</section>
+
+	<!-- Footer Section -->
+
+	<footer class="footer">
+
+		<article class="footer__info">
+			<h1 class="footer__title">Contact</h1>
+			<aside class="footer__content">
+				<div class="footer__description">
+					<span class="footer__description--small-orange">EMAIL</span>
+					<p>info@adweathernetwork.com</p>
+				</div>
+			</aside>
+		</article>
+
+		</article>
+
+		<article class="footer__info" id="about">
+			<h1 class="footer__title">Social</h1>
+			<div class="footer__logo">
+				<a href="https://www.instagram.com/"><img class="footer__icon" src="./assets/icons/icon-instagram.png"
+						alt="instagram" /></a>
+				<a href="https://www.facebook.com/"><img class="footer__icon" src="./assets/icons/icon-facebook.png"
+						alt="facebook" /></a>
+				<a href="https://www.twitter.com/"><img class="footer__icon" src="./assets/icons/icon-twitter.png"
+						alt="twitter" /></a>
+
+		</article>
+		</div>
+	</footer>
 
 
 	<script src="script.js"></script>
