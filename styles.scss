@@ -5,12 +5,12 @@
   padding: 1rem;
   align-items: flex-start;
   justify-content: center;
-}
-.form > * {
-  margin: 1rem;
-  padding: 1rem;
+  & > * {
+    margin: 1rem;
+    padding: 1rem;
+  }
 }
 
 .error {
   color: crimson;
-}/*# sourceMappingURL=styles.css.map */
+}
