@@ -13,7 +13,7 @@ const form = document.querySelector('.form');
 let formInput = document.querySelector('.form__field');
 let content = document.querySelector('.content');
 let toCelsius = (kelvin) => Math.round(kelvin - 273.15);
-toCelsius(278.39);
+
 let toFahrenheit = (kelvin) => Math.round((kelvin - 273.15) * 9 / 5 + 32);
 
 let date = new Date();
@@ -68,7 +68,7 @@ function checkWeather(weatherDesc) {
 	if (weatherDesc.toLowerCase().includes('rain')) {
 		weatherImage.src = "./assets/icons/rainy.png";
 	}
-	if (weatherDesc.toLowerCase().includes('sunny')) {
+	if (weatherDesc.toLowerCase().includes('sunny') || weatherDesc.toLowerCase().includes('clear')) {
 		weatherImage.src = "./assets/icons/sunny.png";
 	}
 
